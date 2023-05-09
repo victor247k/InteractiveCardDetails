@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <style>
+    .attribution { font-size: 11px; 
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <main> 
+    <div class="imageDiv">
+
+      <div class="frontOfTheCard">
+
+        <div class="circleContainer">
+          <div class="whiteCircle"></div>
+          <div class="circle"></div>
+        </div>
+
+        <div class="cardNumber">0000 0000 0000 0000</div>
+
+        <section class="flexContainer">
+          <div class="cardName">JANE APPLESEED</div>
+          <div class="cardDate">00/00</div>
+        </section>  
+
+      </div>
+  
+      <div class="backOfTheCard">
+        <div class="CVC">000</div>
+      </div>
+
+    </div>
+    <div class="infoContainer">
+      <div class="inputNameContainer flex">
+        <label for="inputName">CARDHOLDER NAME</label>
+        <input id="inputName" type="text" placeholder="e.g. Jane Appleseed">
+        <p class="errorMessage nameError"> </p>
+      </div>
+      
+      <div class="inputNumberContainer flex">
+        <label for="inputNumber">CARD NUMBER</label>
+        <input id="inputNumber" type="text" placeholder="e.g. 1234 5678 9123 0000">
+        <p class="errorMessage numberError"> </p>
+      </div>
+
+      <section class="line">
+        <div class="inputDateContainer flex">
+          <label for="inputMonth">EXP. DATE (MM/YY)</label>
+          <section class="flexContainer">
+            <input type="number" id="inputMonth" placeholder="MM">
+            <input type="number" id="inputYear"  placeholder="YY">
+          </section>
+          <p class="errorMessage dateError"> </p>
+        </div>
+        <div class="inputCVCContainer flex">
+          <label for="inputCVC">CVC</label>
+          <input type="number" placeholder="e.g. 123" id="inputCVC">
+          <p class="errorMessage cvcError"> </p>
+        </div>
+      </section>
+
+      <button id="confirmBtn">Confirm</button>
+    </div>
+    
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/victor247k" target="_blank">Victor</a>.
+  </div> 
+  <script src="app.js"></script>
+</body>
+</html>
