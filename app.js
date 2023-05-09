@@ -69,7 +69,7 @@ function DATEfunc() {
     inputYear.style.border = inputYear.value.length === 0 ? "1px solid hsl(0, 100%, 66%)" : "1px solid hsl(279, 6%, 55%)";
     dateError.textContent = (inputYear.value.length === 0 || inputMonth.value.length === 0) ? "Can't be blank" : ""; 
 
-    inputMonth.value = parseInt(inputMonth.value) > 12 ? "12" : parseInt(inputMonth.value) < 10 || inputMonth.value.length < 2 ? `0${inputMonth.value}` : `${inputMonth.value}`;
+    inputMonth.value = parseInt(inputMonth.value) > 12 ? "12" : parseInt(inputMonth.value) < 10 && inputMonth.value.length < 2 ? `0${inputMonth.value}` : `${inputMonth.value}`;
 
     cardDate.textContent = (inputMonth.style.border === "1px solid hsl(0, 100%, 66%)" && inputYear.style.border === "1px solid hsl(0, 100%, 66%)") ? "00/00" :
                             `${inputMonth.value.slice(inputMonth.value.length - 2, inputMonth.value.length) || "00"}/${inputYear.value.slice(inputYear.value.length - 2, inputYear.value.length) || "00"}`;
